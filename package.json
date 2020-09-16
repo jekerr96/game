@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/jekerr96/game/issues"
   },
-  "homepage": "https://github.com/jekerr96/game#readme"
+  "homepage": "https://github.com/jekerr96/game#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
