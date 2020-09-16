@@ -1,0 +1,26 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jekerr96/game.git"
+  },
+  "keywords": [
+    "game",
+    "js",
+    "nodejs",
+    "express",
+    "socket"
+  ],
+  "author": "jekerr <jekerr96@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jekerr96/game/issues"
+  },
+  "homepage": "https://github.com/jekerr96/game#readme"
+}
