@@ -8,10 +8,15 @@ class GameObject {
     context = null;
     position = null;
     game = null;
+    updateCallback = null;
 
     constructor(params) {
         this.params = params;
         this.position = new Vector(params.x, params.y);
+
+        if (params.updateCallback && typeof params.updateCallback === "function") {
+            this.setUpdateCallback(params.updateCallback);
+        }
     }
 
     isColliding() {
@@ -34,6 +39,16 @@ class GameObject {
 
     onStart() {
 
+    }
+
+    update() {
+        if (typeof this.updateCallback !== "function") return;
+
+        this.updateCallback();
+    }
+
+    setUpdateCallback(callback) {
+        this.updateCallback = callback;
     }
 
     render() {

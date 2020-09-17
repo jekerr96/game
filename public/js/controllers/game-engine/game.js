@@ -1,6 +1,7 @@
 import Block from "../game-objects/block";
 import Fps from "../game-objects/fps";
 import Time from "../game-engine/Time";
+import Input from "./input";
 
 class Game {
     classes = {};
@@ -14,14 +15,18 @@ class Game {
         this.classes = {
             Block: Block,
             Fps: Fps,
-        }
+        };
+
+        Input.initInputs();
     }
 
     start(time = 0) {
         this.context.clear();
+        Input.updateInputs();
 
         for (let objectId in this.gameObjects) {
             this.gameObjects[objectId].render();
+            this.gameObjects[objectId].update();
         }
 
         Time.deltaTime = time - Time.lastAnimationFrameTime;

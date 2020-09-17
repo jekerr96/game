@@ -1,6 +1,8 @@
 export const Keyboard = {
-    W: 119,
-    S: 115,
-    A: 97,
-    D: 100,
+    W: "KeyW",
+    S: "KeyS",
+    A: "KeyA",
+    D: "KeyD",
+    MOUSE_CLICK: "mouseClick",
+    MOUSE_POSITION: "mousePosition",
 };
